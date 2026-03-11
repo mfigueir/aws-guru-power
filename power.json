@@ -1,0 +1,90 @@
+{
+  "name": "aws-guru",
+  "displayName": "AWS Guru",
+  "version": "1.2.0",
+  "description": "Production-ready AWS architectural knowledge for Kiro IDE",
+  "keywords": [
+    "aws",
+    "cloud",
+    "architecture",
+    "diagram",
+    "drawio",
+    "draw.io",
+    "diagrams.net",
+    "cost",
+    "pricing",
+    "documentation",
+    "ec2",
+    "s3",
+    "rds",
+    "lambda",
+    "vpc",
+    "ecs",
+    "eks",
+    "cloudformation",
+    "terraform",
+    "well-architected",
+    "optimization",
+    "bedrock",
+    "agentcore",
+    "sagemaker",
+    "infrastructure",
+    "serverless",
+    "microservices",
+    "devops",
+    "security",
+    "networking",
+    "containers",
+    "iam",
+    "monitoring",
+    "cloudwatch",
+    "api-gateway",
+    "dynamodb",
+    "sns",
+    "sqs",
+    "kinesis",
+    "step-functions",
+    "cdk"
+  ],
+  "author": {
+    "name": "AWS Guru Team",
+    "email": "aws-guru@example.com"
+  },
+  "license": "MIT",
+  "mcpServers": {
+    "aws-docs": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    },
+    "aws-diagram": {
+      "command": "uvx",
+      "args": ["awslabs.aws-diagram-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    },
+    "drawio-generator": {
+      "command": "node",
+      "args": ["${powerDir}/mcp-servers/drawio-generator/index.js"]
+    },
+    "abap-analyzer": {
+      "command": "node",
+      "args": ["${powerDir}/mcp-servers/abap-analyzer/index.js"]
+    }
+  },
+  "dependencies": {
+    "graphviz": "Required for PNG diagram generation. Install with: brew install graphviz (macOS) or apt-get install graphviz (Linux)",
+    "node": "Required for draw.io generator and ABAP analyzer. Node.js >= 18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws-guru/kiro-power"
+  },
+  "homepage": "https://github.com/aws-guru/kiro-power#readme",
+  "bugs": {
+    "url": "https://github.com/aws-guru/kiro-power/issues"
+  }
+}

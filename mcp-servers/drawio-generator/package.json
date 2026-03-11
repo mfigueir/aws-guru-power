@@ -1,0 +1,16 @@
+{
+  "name": "drawio-generator",
+  "version": "1.0.0",
+  "description": "MCP server for generating editable draw.io diagrams with AWS architecture icons",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
